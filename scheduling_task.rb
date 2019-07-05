@@ -33,7 +33,7 @@ bank_holidays = [
   '1 January 2020'
 ]
 
-#define a method which parses data from an array
+#define a method which parses data from an array of dates into ruby datetime format
 def parseDates(array)
   #create array to hold the parsed dates
   parsed_dates = []
@@ -42,6 +42,7 @@ def parseDates(array)
     parsed_date = Date.parse(date)
     parsed_dates.push(parsed_date)
   end
+  parsed_dates
 end
 
 #define a method which accepts two paramets, an array of dates and an array of bank holidays, and return an array of dates corrected for bank holidays
